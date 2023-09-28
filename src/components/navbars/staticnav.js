@@ -118,7 +118,8 @@ export default function StaticNav(props) {
                 <Grid className="dropdown-content"
                 sx={{
                   width:{lg:"5%",xs:"20%"},
-                  position:"relative",
+                  display:"flex",
+                  flexDirection:"column"
                 }}
                 >
                   <div className="language-option" onClick={() => changeLanguage('EN')}>

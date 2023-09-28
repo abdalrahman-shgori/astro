@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import StaticNav from "../navbars/staticnav";
 import NavBar from "../navbars/navbar";
 import { Container } from "react-bootstrap";
@@ -13,7 +13,9 @@ import Footer from "../footer/footer";
 import Blog from "../blogs/blogs";
 
 function HomePage() {
-
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" }); 
+    }, []);
 
     return (
         <>

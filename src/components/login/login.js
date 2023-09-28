@@ -37,7 +37,7 @@ const textStyle = {
 
 const text = {
     color: "#281E59",
-    fontSize: "16px",
+    fontSize: {lg:"16px",xs:"14px"},
     fontWeight: "400",
     fontFamily: "Anodina"
 }
@@ -91,7 +91,7 @@ function Login() {
                             justifyContent: "center",
                             alignItems: "center",
                             zIndex: "1",
-                            height: "100vh"
+                            height: "100vh",
                         }}
                     >
 
@@ -158,7 +158,7 @@ function Login() {
                                 <Typography
                                     sx={{
                                         display: "flex",
-                                        gap: "16px"
+                                        gap: {lg:"16px",xs:"2px"},
 
                                     }}
                                 >
@@ -180,10 +180,14 @@ function Login() {
                                 </Typography>
                                 <Typography
                                     sx={{
-                                        ...text
+                                        ...text,
+                                        position:"relative",
+                                        left:{lg:"0px",xs:"10px"}
+                                        
+                                       
                                     }}
                                 >
-                                    Forgot Password
+                                    Forgot Password?
                                 </Typography>
                             </Box>
                             <Box

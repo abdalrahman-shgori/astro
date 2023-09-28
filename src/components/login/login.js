@@ -1,4 +1,4 @@
-import { Box, Grid, TextField, Typography } from "@mui/material";
+import { Box, Grid,Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import logo from "../../assets/images/logoLogin.svg"
 import logo2 from "../../assets/images/logoLogin2.svg"
@@ -42,10 +42,7 @@ const text = {
     fontFamily: "Anodina"
 }
 function Login() {
-    const navigate = useNavigate();
-    const handleNavigate = () => {
-        navigate("/HomePage")
-    }
+  
     useEffect(() => {
         AOS.init(); // Initialize AOS
     }, []);
@@ -106,10 +103,6 @@ function Login() {
                                 gap: "30px",
                                 position: "relative",
                                 marginTop: { lg: "70px", xs: "20px" },
-
-
-
-
                             }}
                         >
                             <Box
@@ -198,7 +191,6 @@ function Login() {
                             >
 
                                 <button
-                                    onClick={handleNavigate}
                                     style={{
                                         background: " linear-gradient(91.94deg, #4D4BB8 3.7%, #A4A2F9 119.13%)",
                                         border: "none",

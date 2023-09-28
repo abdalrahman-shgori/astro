@@ -16,40 +16,46 @@ function HomePage() {
     const [isPageLoaded, setIsPageLoaded] = useState(false);
 
     useEffect(() => {
-      // Listen for the 'load' event to check when the page has finished loading
-      window.addEventListener("load", () => {
-        setIsPageLoaded(true);
-      });
-  
-      // Clean up the event listener when the component unmounts
-      return () => {
-        window.removeEventListener("load", () => {
-          setIsPageLoaded(true);
-        });
-      };
+        const checkPageLoaded = () => {
+            if (document.readyState === "complete") {
+                setIsPageLoaded(true);
+            }
+        };
+
+        // Check the loading status of the document initially
+        checkPageLoaded();
+
+        // Listen for changes in the document's loading status
+        document.addEventListener("readystatechange", checkPageLoaded);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            document.removeEventListener("readystatechange", checkPageLoaded);
+        };
     }, []);
 
     return (
         <>
-         {!isPageLoaded ? (
-        // Display a loading indicator while the page is loading
-        <div>Loading...</div>
-      ) : (
-        <>
-            <StaticNav />
-            <NavBar />
-            <Hero />
-            <RunWay />
-            <Experience />
-            <Services />
-            <Featucres />
-            <Talking />
-            <Blog />
-            <Footer />
-            </>
+            {!isPageLoaded ? (
+                // Display a loading indicator while the page is loading
+                <div>Loading...</div>
+            ) : (
+                // Render the components once the page is fully loaded
+                <>
+                    <StaticNav />
+                    <NavBar />
+                    <Hero />
+                    <RunWay />
+                    <Experience />
+                    <Services />
+                    <Featucres />
+                    <Talking />
+                    <Blog />
+                    <Footer />
+                </>
             )}
         </>
-    )
+    );
 }
 
-export default HomePage
+export default HomePage;

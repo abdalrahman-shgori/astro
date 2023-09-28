@@ -47,13 +47,24 @@ function Hero() {
             >
                 <Grid container
                     sx={{
-                        paddingLeft: "100px",
+                        paddingLeft: {lg:"100px",xs:"50px"},
+                        paddingRight:{lg:"100px",xs:"30px"},
+                        display:"flex",
+                        justifyContent:"center"
                     }}
                 >
-                    <Grid lg={5}>
+                    <Grid lg={5}
+                    sx={{
+                        paddingRight:{lg:"0px",xs:"20px"}
+                    }}
+                    >
                         <Box
                             data-aos="fade-down"
                             data-aos-duration="2500"
+                            sx={{
+                                display:"flex",
+                                justifyContent:{lg:"start",xs:"center"}
+                            }}
 
                         >
                             <img src={astrologo}></img>
@@ -66,7 +77,7 @@ function Hero() {
                             <img src={rocket}></img>
                         </Box>
                     </Grid>
-                    <Grid lg={7}
+                    <Grid lg={7} xs={12}
                         sx={{
                             display: "flex",
                             flexDirection: "column",
@@ -77,7 +88,7 @@ function Hero() {
                             <Typography className="mirrored-text"
 
                                 sx={{
-                                    fontSize: { lg: "124px", xs: "44px" },
+                                    fontSize: { lg: "124px", xs: "36px" },
                                     lineHeight: { lg: "120px", xs: "44px" },
 
                                 }}
@@ -89,7 +100,7 @@ function Hero() {
                                     color: "#F3F3FF",
                                     fontWeight: "700",
                                     fontFamily: "Anodina",
-                                    fontSize: { lg: "124px", xs: "40px" },
+                                    fontSize: { lg: "124px", xs: "36px" },
                                     lineHeight: { lg: "120px", xs: "40px" },
                                     position: "relative",
                                     zIndex: "1"
@@ -126,7 +137,9 @@ function Hero() {
                             sx={{
                                 display: "flex",
                                 transform: "rotate(90deg)",
-                                gap: "6px"
+                                gap: "6px",
+                                position:"relative",
+                                right:{lg:"0px",xs:"20px"}
                             }}
                         >
                             <Typography

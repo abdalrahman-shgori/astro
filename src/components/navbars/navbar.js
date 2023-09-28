@@ -18,7 +18,7 @@ import logo from "../../assets/images/logo.svg"
 import vector from "../../assets/images/Vector.svg"
 import notification from "../../assets/images/notification.svg"
 import shopping from "../../assets/images/shopping.svg"
-const pages = [shopping,notification ];
+const pages = [shopping, notification];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
@@ -43,22 +43,22 @@ function NavBar() {
   const Toggle = styled(Switch)(({ theme }) => ({
     '& .MuiSwitch-switchBase.Mui-checked': {
       color: "#5957C1",
-     
+
     },
     '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
       backgroundColor: "#E3E2FF",
     },
   }));
-  
+
   const label = { inputProps: { 'aria-label': 'Color switch demo' } };
   return (
     <AppBar position="static"
-    sx={{
-        background:"#F3F3FF",
-        paddingLeft:{lg:"58px",xs:"0px"},
-        paddingRight:{lg:"50px",xs:"0px"},
-        boxShadow:"none"
-    }}
+      sx={{
+        background: "#F3F3FF",
+        paddingLeft: { lg: "58px", xs: "0px" },
+        paddingRight: { lg: "50px", xs: "0px" },
+        boxShadow: "none"
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -82,16 +82,16 @@ function NavBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-            sx={{
-              position:"relative",
-              right:"8px"
-            }}
+              sx={{
+                position: "relative",
+                right: "8px"
+              }}
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-                <img src={vector}></img>
+              <img src={vector}></img>
             </IconButton>
-          
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -153,85 +153,85 @@ function NavBar() {
             }}
           >
             <div
-          style={{
-            display:"flex",
-            alignItems:"center",
-            position:"relative",
-            left:"9px",
-          }}
-          >
-            <Typography
-            sx={{
-              color:"#281E59",
-              fontSize:"16px",
-              fontFamily:"Anodina",
-              fontWeight:"800"
-            }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                position: "relative",
+                left: "9px",
+              }}
             >
-            Light Mode
-            </Typography>
-      <Toggle {...label} defaultChecked />
-    </div>
+              <Typography
+                sx={{
+                  color: "#281E59",
+                  fontSize: "16px",
+                  fontFamily: "Anodina",
+                  fontWeight: "800"
+                }}
+              >
+                Light Mode
+              </Typography>
+              <Toggle {...label} defaultChecked />
+            </div>
           </Typography>
-          
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },justifyContent:"end",gap:"30px",alignItems:"center" }}>
-          <div
-          style={{
-            display:"flex",
-            alignItems:"center",
-            position:"relative",
-            left:"9px"
-          }}
-          >
-            <Typography
-            sx={{
-              color:"#281E59",
-              fontSize:"16px",
-              fontFamily:"Anodina",
-              fontWeight:"800"
-            }}
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "end", gap: "30px", alignItems: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                position: "relative",
+                left: "9px"
+              }}
             >
-            Light Mode
-            </Typography>
-      <Toggle {...label} defaultChecked />
-    </div>
+              <Typography
+                sx={{
+                  color: "#281E59",
+                  fontSize: "16px",
+                  fontFamily: "Anodina",
+                  fontWeight: "800"
+                }}
+              >
+                Light Mode
+              </Typography>
+              <Toggle {...label} defaultChecked />
+            </div>
             {pages.map((page) => (
-             <img  src={page}></img>
+              <img src={page}></img>
             ))}
-             <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <img src={vector}></img>
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <img src={vector}></img>
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: '45px' }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
 
-            
-          </Box>
+
+            </Box>
           </Box>
 
-         
+
         </Toolbar>
       </Container>
     </AppBar>

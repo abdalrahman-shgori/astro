@@ -1,57 +1,56 @@
 .language-dropdown {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 4px; /* Add border radius or adjust as needed */
-    padding: 8px;
-    transition: border-color 0.3s;
-  }
-  
-  .language-dropdown:hover {
-    border-color: #007bff; /* Change the border color on hover */
-  }
-  
-  .flag img {
-    width: 24px; /* Adjust the width of the flag */
-    height: 16px; /* Adjust the height of the flag */
-    margin-right: 8px; /* Add spacing between flag and text */
-  }
-  
-  .language {
-    flex-grow: 1; /* Grow to fill available space */
-  }
-  
-  .dropdown-arrow {
-    margin-left: 8px; /* Add spacing between text and arrow */
-    font-size: 12px; /* Adjust arrow size */
-  }
-  
-  .dropdown-arrow.open {
-    transform: rotate(180deg); /* Rotate arrow when the dropdown is open */
-  }
-  
-  .dropdown-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 30px;
-    width: 5%;
-    z-index: 1;
-    background-color: #fff;
-    border-top: none; /* Remove top border to avoid double border */
-    border-radius: 0 0 4px 4px; /* Add border radius or adjust as needed */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow or adjust as needed */
-  }
-  
-  .language-option {
-    padding: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .language-option:hover {
-    background-color: #f2f2f2; /* Change background color on hover */
-  }
-  
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px;
+  transition: border-color 0.3s;
+}
+
+.language-dropdown:hover {
+  border-color: #007bff;
+}
+
+.flag img {
+  width: 24px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.language {
+  flex-grow: 1;
+}
+
+.dropdown-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  width: 5%;
+  z-index: 1;
+  background-color: #fff;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.language-option {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.language-option:hover {
+  background-color: #f2f2f2;
+}

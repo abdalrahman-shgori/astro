@@ -10,7 +10,7 @@ import twit from "../../assets/images/twitterLogin.svg"
 import astro from "../../assets/images/astroLogin.svg"
 import loginImg from "../../assets/images/loginImg.svg"
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import "./login.css"
 import { useNavigate } from "react-router-dom";
 const social = [
@@ -48,8 +48,8 @@ function Login() {
     }
     useEffect(() => {
         AOS.init(); // Initialize AOS
-      }, []);
-    
+    }, []);
+
     return (
 
         <>
@@ -91,7 +91,7 @@ function Login() {
                             justifyContent: "center",
                             alignItems: "center",
                             zIndex: "1",
-                            height:"100vh"
+                            height: "100vh"
                         }}
                     >
 
@@ -113,8 +113,8 @@ function Login() {
                             }}
                         >
                             <Box
-                            data-aos="fade-down"
-                            data-aos-duration="2500"
+                                data-aos="fade-down"
+                                data-aos-duration="2500"
                                 sx={{
                                     position: "absolute",
                                     zIndex: "-1",
@@ -139,7 +139,7 @@ function Login() {
                             >
                                 <input type="text"
                                     placeholder="User Name"
-                                    className="custom-input" // Apply the custom class here
+                                    className="custom-input"
                                 />
                             </Box>
                             <Box
@@ -150,7 +150,7 @@ function Login() {
                                 <input
                                     type="text"
                                     placeholder="Password"
-                                    className="custom-input" // Apply the custom class here
+                                    className="custom-input"
                                 />
                             </Box>
                             <Box

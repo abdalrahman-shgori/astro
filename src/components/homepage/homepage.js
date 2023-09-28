@@ -1,4 +1,4 @@
-import React from "react";  
+import React from "react";
 import StaticNav from "../navbars/staticnav";
 import NavBar from "../navbars/navbar";
 import { Container } from "react-bootstrap";
@@ -12,23 +12,23 @@ import Talking from "../talkingAbout/talkingAbout";
 import Footer from "../footer/footer";
 import Blog from "../blogs/blogs";
 
-function HomePage(){
+function HomePage() {
 
 
-    return(
-<>
-<StaticNav/>
-<NavBar/>
-<Hero/>
-<RunWay/>
-<Experience/>
-<Services/>
-<Featucres/>
-<Talking/>
-<Blog/>
-<Footer/>
+    return (
+        <>
+            <StaticNav />
+            <NavBar />
+            <Hero />
+            <RunWay />
+            <Experience />
+            <Services />
+            <Featucres />
+            <Talking />
+            <Blog />
+            <Footer />
 
-</>
+        </>
     )
 }
 

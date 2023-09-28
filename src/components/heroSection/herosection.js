@@ -1,4 +1,4 @@
-import React, { useEffect ,useState} from "react";
+import React, { useEffect, useState } from "react";
 import './herosection.css'
 import { Grid, Box, Typography } from "@mui/material";
 import astrologo from "../../assets/images/astrologo.png"
@@ -19,24 +19,24 @@ function Hero() {
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
-      AOS.init();
-  
-      const handleScroll = () => {
-        setScrollY(window.scrollY);
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
+        AOS.init();
+
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
-  
+
     useEffect(() => {
-      // Refresh AOS animations when scrolling back up
-      if (scrollY === 0) {
-        AOS.refresh();
-      }
+
+        if (scrollY === 0) {
+            AOS.refresh();
+        }
     }, [scrollY]);
     return (
         <>
@@ -52,17 +52,17 @@ function Hero() {
                 >
                     <Grid lg={5}>
                         <Box
-                         data-aos="fade-down"
-                         data-aos-duration="2500"
+                            data-aos="fade-down"
+                            data-aos-duration="2500"
 
-                         >
+                        >
                             <img src={astrologo}></img>
                         </Box>
-                        <Box 
-                         data-aos="fade-up-right" 
-                         data-aos-duration="2500"
+                        <Box
+                            data-aos="fade-up-right"
+                            data-aos-duration="2500"
 
-                         >
+                        >
                             <img src={rocket}></img>
                         </Box>
                     </Grid>
@@ -91,7 +91,7 @@ function Hero() {
                                     fontFamily: "Anodina",
                                     fontSize: { lg: "124px", xs: "40px" },
                                     lineHeight: { lg: "120px", xs: "40px" },
-                                    position: "relative", // Add relative positioning to create a stacking context
+                                    position: "relative",
                                     zIndex: "1"
                                 }}
                             >

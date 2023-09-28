@@ -59,10 +59,10 @@ function Footer() {
                             }}
                         >
                             <Box
-                            sx={{
-                                display:"flex",
-                                justifyContent:{lg:"start",xs:"center"}
-                            }}
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: { lg: "start", xs: "center" }
+                                }}
                             >
                                 <img src={logo}></img>
                             </Box>
@@ -239,7 +239,7 @@ function Footer() {
                                             gap: "40px"
                                         }}
                                     >
-                                        +99999999999999 
+                                        +99999999999999
                                     </Typography>
                                 </Box>
                                 <Box

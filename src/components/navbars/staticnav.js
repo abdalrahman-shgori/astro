@@ -15,14 +15,11 @@ import twit from "../../assets/images/twitter.svg"
 import inst from "../../assets/images/instagram.svg"
 import ukflag from "../../assets/images/ukflag.svg"
 import sa from "../../assets/images/sa.png"
-import './LanguageDropdown.css'; // Import your CSS file for styling
+import './LanguageDropdown.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 function ScrollTop(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -56,123 +53,108 @@ function ScrollTop(props) {
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+
   window: PropTypes.func,
 };
 
-const socialmed =[
-    {img:facebook},
-    {img:linkedin},
-    {img:twit},
-    {img:inst}
+const socialmed = [
+  { img: facebook },
+  { img: linkedin },
+  { img: twit },
+  { img: inst }
 ]
 export default function StaticNav(props) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('EN'); // Initialize with 'EN'
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const changeLanguage = (language) => {
     setSelectedLanguage(language);
-    toggleDropdown(); // Close the dropdown after selecting a language
+    toggleDropdown();
   };
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar
-      sx={{
-        background:"#F3F3FF",
-        width:"100%",
-        paddingLeft:{lg:"50px",xs:"0px"},
-        paddingRight:{lg:"50px",xs:"0px"},
-        boxShadow: '2px 0px 8px 0px rgba(40, 30, 89, 0.1)'
-      }}
+        sx={{
+          background: "#F3F3FF",
+          width: "100%",
+          paddingLeft: { lg: "50px", xs: "0px" },
+          paddingRight: { lg: "50px", xs: "0px" },
+          boxShadow: '2px 0px 8px 0px rgba(40, 30, 89, 0.1)'
+        }}
       >
         <Toolbar
-        sx={{
-            display:"flex",
-            justifyContent:"space-between",
-            
-        }}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+
+          }}
         >
           <Typography variant="h6" component="div"
-          sx={{
-            color:"#281E59"
-          }}
+            sx={{
+              color: "#281E59"
+            }}
           >
-            
-              <div className={`language-dropdown ${isOpen ? 'open' : ''}`} onClick={toggleDropdown}>
-      <div className="flag">
-        <img 
-        style={{
-            width:"24px",
-            height:"24px",
-            display:"flex",
-            alignItems:"center"
-        }}
-        src={selectedLanguage == "EN" ? ukflag : sa } alt="Flag" />
-      </div>
-      
-      <div className="language">{selectedLanguage}</div>
-      <div className="dropdown-arrow">
-        <i className={`fas fa-chevron-down ${isOpen ? 'open' : ''}`} />
-      </div>
-      {isOpen && (
-        <div className="dropdown-content">
-          <div className="language-option" onClick={() => changeLanguage('EN')}>
-            EN
-          </div>
-          <div className="language-option" onClick={() => changeLanguage('AR')}>
-            AR
-          </div>
-          
-        </div>
-      )}
-       <div className="dropdown-arrow">
-        {isOpen ?  <KeyboardArrowUpIcon
-          className={`arrow-icon ${isOpen ? 'open' : ''}`}
-        /> :<KeyboardArrowDownIcon
-        className={`arrow-icon ${isOpen ? 'open' : ''}`}
-      />}
-       
-      </div>
-    </div>
+
+            <div className={`language-dropdown ${isOpen ? 'open' : ''}`} onClick={toggleDropdown}>
+              <div className="flag">
+                <img
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    display: "flex",
+                    alignItems: "center"
+                  }}
+                  src={selectedLanguage == "EN" ? ukflag : sa} alt="Flag" />
+              </div>
+
+              <div className="language">{selectedLanguage}</div>
+              <div className="dropdown-arrow">
+                <i className={`fas fa-chevron-down ${isOpen ? 'open' : ''}`} />
+              </div>
+              {isOpen && (
+                <div className="dropdown-content">
+                  <div className="language-option" onClick={() => changeLanguage('EN')}>
+                    EN
+                  </div>
+                  <div className="language-option" onClick={() => changeLanguage('AR')}>
+                    AR
+                  </div>
+
+                </div>
+              )}
+              <div className="dropdown-arrow">
+                {isOpen ? <KeyboardArrowUpIcon
+                  className={`arrow-icon ${isOpen ? 'open' : ''}`}
+                /> : <KeyboardArrowDownIcon
+                  className={`arrow-icon ${isOpen ? 'open' : ''}`}
+                />}
+
+              </div>
+            </div>
           </Typography>
           <Typography
-          sx={{
-            color:"green"
-          }}
+            sx={{
+              color: "green"
+            }}
           >
-             <Box
-             sx={{
-                display:"flex",
-                gap:"10px"
-             }}
-             > 
-            {socialmed.map((item, index) => (
-  <img style={{width:"24px",height:"24px"}} key={index} src={item.img} alt={`Social Media ${index}`} />
-))}
-</Box>
-  
+            <Box
+              sx={{
+                display: "flex",
+                gap: "10px"
+              }}
+            >
+              {socialmed.map((item, index) => (
+                <img style={{ width: "24px", height: "24px" }} key={index} src={item.img} alt={`Social Media ${index}`} />
+              ))}
+            </Box>
+
 
           </Typography>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
-      {/* <Container>
-        <Box sx={{ my: 2 }}>
-          {[...new Array(12)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-            )
-            .join('\n')}
-        </Box>
-      </Container> */}
       <ScrollTop {...props}>
         <Fab size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />

@@ -1,24 +1,22 @@
-.backgroundimgLogin{
-    background-image: url('../../assets/images/loginbg.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+.backgroundimgLogin {
+  background-image: url('../../assets/images/loginbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 
 .custom-input {
-    width: 100%;
-    padding-left: 10px;
-    background-color: #F3F3FF;
-    border: 0.5px solid #774BCC;
-    box-shadow: 2px 4px 4px 0px #A4A2F914;
-    border-radius: 4px;
-    height: 48px;
-    font-size: 16px;
-  }
-  
-  .custom-input::placeholder {
-    color: rgba(40, 30, 89, 0.5);
+  width: 100%;
+  padding-left: 10px;
+  background-color: #F3F3FF;
+  border: 0.5px solid #774BCC;
+  box-shadow: 2px 4px 4px 0px #A4A2F914;
+  border-radius: 4px;
+  height: 48px;
+  font-size: 16px;
 }
 
-  
+.custom-input::placeholder {
+  color: rgba(40, 30, 89, 0.5);
+}

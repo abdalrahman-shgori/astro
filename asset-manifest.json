@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/astro/static/css/main.c5473f81.css",
-    "main.js": "/astro/static/js/main.178c3ed5.js",
+    "main.js": "/astro/static/js/main.142e56a2.js",
     "static/js/787.47a32c5f.chunk.js": "/astro/static/js/787.47a32c5f.chunk.js",
     "static/media/smsMarketing.svg": "/astro/static/media/smsMarketing.cc0ce112cd7f0b5b0275ab3a0768ac95.svg",
     "static/media/wifiSolution.svg": "/astro/static/media/wifiSolution.0bfe3bb0cbffc110550d33305d287857.svg",
@@ -63,11 +63,11 @@
     "static/media/Vector.svg": "/astro/static/media/Vector.29bbccef402c83f48dedaa2cfc005aff.svg",
     "static/media/lines.svg": "/astro/static/media/lines.1ccd0d8366f85d676b3d9647f242624f.svg",
     "main.c5473f81.css.map": "/astro/static/css/main.c5473f81.css.map",
-    "main.178c3ed5.js.map": "/astro/static/js/main.178c3ed5.js.map",
+    "main.142e56a2.js.map": "/astro/static/js/main.142e56a2.js.map",
     "787.47a32c5f.chunk.js.map": "/astro/static/js/787.47a32c5f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5473f81.css",
-    "static/js/main.178c3ed5.js"
+    "static/js/main.142e56a2.js"
   ]
 }

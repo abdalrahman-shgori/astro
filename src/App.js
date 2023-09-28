@@ -21,8 +21,8 @@ function App() {
       ) : (
         // Render the components once isLoading is false
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="HomePage" element={<HomePage />} />
+          <Route path="/" element={<Login/>} />
+          <Route path="HomePage" element={<HomePage/>} />
         </Routes>
       )}
     </>

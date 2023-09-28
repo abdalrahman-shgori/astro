@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StaticNav from "../navbars/staticnav";
 import NavBar from "../navbars/navbar";
 import { Container } from "react-bootstrap";
@@ -13,9 +13,28 @@ import Footer from "../footer/footer";
 import Blog from "../blogs/blogs";
 
 function HomePage() {
+    const [isPageLoaded, setIsPageLoaded] = useState(false);
 
+    useEffect(() => {
+      // Listen for the 'load' event to check when the page has finished loading
+      window.addEventListener("load", () => {
+        setIsPageLoaded(true);
+      });
+  
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener("load", () => {
+          setIsPageLoaded(true);
+        });
+      };
+    }, []);
 
     return (
+        <>
+         {!isPageLoaded ? (
+        // Display a loading indicator while the page is loading
+        <div>Loading...</div>
+      ) : (
         <>
             <StaticNav />
             <NavBar />
@@ -27,7 +46,8 @@ function HomePage() {
             <Talking />
             <Blog />
             <Footer />
-
+            </>
+            )}
         </>
     )
 }

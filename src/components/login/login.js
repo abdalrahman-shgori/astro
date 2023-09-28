@@ -42,7 +42,10 @@ const text = {
     fontFamily: "Anodina"
 }
 function Login() {
-  
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate("/HomePage")
+    }
     useEffect(() => {
         AOS.init(); // Initialize AOS
     }, []);
@@ -191,6 +194,7 @@ function Login() {
                             >
 
                                 <button
+                                    onClick={handleNavigate}
                                     style={{
                                         background: " linear-gradient(91.94deg, #4D4BB8 3.7%, #A4A2F9 119.13%)",
                                         border: "none",

@@ -209,8 +209,7 @@ function Blog() {
                     <Grid lg={6.5}
                         className={sectionInView ? 'animated-element' : ''}
 
-                        data-aos="fade-left"
-                        data-aos-duration="3500"
+                       
                         sx={{
                             paddingTop: { lg: "36px", xs: "0px" },
                             paddingBottom: "20px",
@@ -220,6 +219,8 @@ function Blog() {
                         {blogs.map((item) => (
                             <>
                                 <Grid container
+                                 data-aos="fade-left"
+                                 data-aos-duration="3500"
                                     sx={{
                                         display: "flex",
                                         gap: { lg: "30px", xs: "0px" },

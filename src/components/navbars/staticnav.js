@@ -18,6 +18,7 @@ import sa from "../../assets/images/sa.png"
 import './LanguageDropdown.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { Grid } from '@mui/material';
 function ScrollTop(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -114,7 +115,12 @@ export default function StaticNav(props) {
                 <i className={`fas fa-chevron-down ${isOpen ? 'open' : ''}`} />
               </div>
               {isOpen && (
-                <div className="dropdown-content">
+                <Grid className="dropdown-content"
+                sx={{
+                  width:{lg:"5%",xs:"20%"},
+                  position:"relative",
+                }}
+                >
                   <div className="language-option" onClick={() => changeLanguage('EN')}>
                     EN
                   </div>
@@ -122,7 +128,7 @@ export default function StaticNav(props) {
                     AR
                   </div>
 
-                </div>
+                </Grid>
               )}
               <div className="dropdown-arrow">
                 {isOpen ? <KeyboardArrowUpIcon

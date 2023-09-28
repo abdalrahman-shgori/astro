@@ -209,7 +209,8 @@ function Services() {
                                     <>
                                         <Grid
                                             sx={{
-                                                position: "relative"
+                                                position: "relative",
+                                                display:{lg:"block",xs:"none"}
 
                                             }}
                                         >

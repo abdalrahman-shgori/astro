@@ -1,7 +1,7 @@
-import React, { useState, useEffect,useLocation } from "react";
+import React, { useState, useEffect } from "react";
 import HomePage from "./components/homepage/homepage";
 import Login from "./components/login/login";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
   const location=useLocation();

@@ -1,0 +1,22 @@
+.background{
+    background-image: url('../../assets/images/homeimg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+  
+}
+
+.mirror-text-container {
+    position: relative;
+  }
+  
+  .mirrored-text {
+    position: absolute;
+    top: 6%; /* Adjust the top offset as needed */
+    left: -10px; /* Adjust the left offset as needed */
+    color: #5A44C2;
+    font-weight: 700;
+    font-family: "Anodina";
+    opacity: 0.2; /* Adjust opacity as needed */
+    z-index: 1; /* Place the mirrored text behind the original text */
+  }

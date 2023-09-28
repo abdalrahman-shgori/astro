@@ -1,0 +1,5 @@
+.backgroundimg{
+    background-image: url('../../assets/images/earth.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

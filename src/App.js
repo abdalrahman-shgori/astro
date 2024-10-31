@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import HomePage from "./components/homepage/homepage";
 import Login from "./components/login/login";
 import { Routes, Route, useLocation } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const location=useLocation();
